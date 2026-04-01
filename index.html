@@ -7,7 +7,7 @@
   <title>Fit Coach – AI Workout Generator</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
   <style>
     :root {
@@ -35,8 +35,61 @@
     body {
       background: var(--black);
       color: var(--white);
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'DM Sans', 'Noto Sans', 'Noto Sans SC', system-ui, sans-serif;
       overflow-x: hidden;
+    }
+
+    html[data-lang="zhCN"] h1,
+    html[data-lang="zhCN"] .section-title,
+    html[data-lang="zhCN"] .feature-title,
+    html[data-lang="zhCN"] .feature-num,
+    html[data-lang="zhCN"] .step-num,
+    html[data-lang="zhCN"] .cta-bottom h2 {
+      font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .lang-select {
+      appearance: none;
+      -webkit-appearance: none;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(0, 240, 255, 0.22);
+      color: var(--white);
+      padding: 9px 32px 9px 14px;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      font-family: inherit;
+      cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='%237a7a99'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      max-width: min(200px, 42vw);
+    }
+
+    .lang-select:hover,
+    .lang-select:focus {
+      border-color: rgba(0, 240, 255, 0.4);
+      outline: none;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
 
     .grad-text {
@@ -63,7 +116,7 @@
     }
 
     .nav-logo {
-      font-family: 'Bebas Neue', sans-serif;
+      font-family: 'Bebas Neue', 'Noto Sans', sans-serif;
       font-size: 1.55rem;
       letter-spacing: 3px;
       background: linear-gradient(90deg, var(--cyan), var(--pink));
@@ -175,7 +228,7 @@
     }
 
     h1 {
-      font-family: 'Bebas Neue', sans-serif;
+      font-family: 'Bebas Neue', 'Noto Sans', sans-serif;
       font-size: clamp(3.5rem, 7vw, 6.2rem);
       line-height: 0.93;
       letter-spacing: 1px;
@@ -301,7 +354,7 @@
     }
 
     .section-title {
-      font-family: 'Bebas Neue', sans-serif;
+      font-family: 'Bebas Neue', 'Noto Sans', sans-serif;
       font-size: clamp(2.5rem, 5vw, 4rem);
       line-height: 0.97;
       margin-bottom: 56px;
@@ -364,7 +417,7 @@
     .feature-text {}
 
     .feature-num {
-      font-family: 'Bebas Neue', sans-serif;
+      font-family: 'Bebas Neue', 'Noto Sans', sans-serif;
       font-size: 5.5rem;
       line-height: 1;
       background: linear-gradient(135deg, rgba(0, 240, 255, 0.12), rgba(192, 0, 255, 0.12));
@@ -392,7 +445,7 @@
     }
 
     .feature-title {
-      font-family: 'Bebas Neue', sans-serif;
+      font-family: 'Bebas Neue', 'Noto Sans', sans-serif;
       font-size: clamp(2.2rem, 4vw, 3.2rem);
       line-height: 1;
       margin-bottom: 20px;
@@ -631,7 +684,7 @@
     }
 
     .step-num {
-      font-family: 'Bebas Neue', sans-serif;
+      font-family: 'Bebas Neue', 'Noto Sans', sans-serif;
       font-size: 4rem;
       line-height: 1;
       background: linear-gradient(135deg, rgba(0, 240, 255, 0.25), rgba(192, 0, 255, 0.25));
@@ -727,7 +780,7 @@
     }
 
     .cta-bottom h2 {
-      font-family: 'Bebas Neue', sans-serif;
+      font-family: 'Bebas Neue', 'Noto Sans', sans-serif;
       font-size: clamp(3rem, 6vw, 5.5rem);
       line-height: 0.95;
       margin-bottom: 20px;
@@ -772,6 +825,19 @@
     @media (max-width: 768px) {
       nav {
         padding: 16px 20px;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .nav-right {
+        width: 100%;
+        justify-content: flex-end;
+      }
+
+      .lang-select {
+        max-width: min(180px, 48vw);
+        font-size: 0.7rem;
+        padding: 8px 28px 8px 10px;
       }
 
       .hero {
@@ -882,7 +948,20 @@
 
   <nav>
     <div class="nav-logo">FIT COACH</div>
-    <a href="https://apps.apple.com/app/id6760431730" class="nav-cta" target="_blank" rel="noopener">Download Free</a>
+    <div class="nav-right">
+      <label for="lang-select" class="visually-hidden" id="lang-label"><span data-i18n="nav.langAria"></span></label>
+      <select id="lang-select" class="lang-select" aria-labelledby="lang-label">
+        <option value="en">English</option>
+        <option value="de">Deutsch</option>
+        <option value="es">Español</option>
+        <option value="ptBR">Português (Brasil)</option>
+        <option value="ptPT">Português (Portugal)</option>
+        <option value="fr">Français</option>
+        <option value="ru">Русский</option>
+        <option value="zhCN">简体中文</option>
+      </select>
+      <a href="https://apps.apple.com/app/id6760431730" class="nav-cta" target="_blank" rel="noopener" data-i18n="nav.download"></a>
+    </div>
   </nav>
 
   <!-- HERO -->
@@ -891,31 +970,30 @@
       <div class="hero-text fade-up">
         <div class="hero-badge">
           <div class="hero-badge-dot"></div>
-          AI-Powered Training
+          <span data-i18n="hero.badge"></span>
         </div>
-        <h1>TRAIN<br>SMARTER.<br><span class="grad-text">NOT HARDER.</span></h1>
-        <p class="hero-sub">Personalized workout plans generated by AI. built around your goals, schedule, fitness
-          level, and the equipment you actually have.</p>
+        <h1 class="grad-text" data-i18n="hero.headline"></h1>
+        <p class="hero-sub" data-i18n="hero.sub"></p>
         <div class="cta-group">
           <a href="https://apps.apple.com/app/id6760431730" class="btn-primary" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor">
               <path
                 d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
             </svg>
-            App Store
+            <span data-i18n="hero.appStore"></span>
           </a>
-          <span class="hero-note">Free to download +</span>
+          <span class="hero-note" data-i18n="hero.note"></span>
         </div>
       </div>
       <div class="hero-phones fade-up">
         <div class="phone-frame phone-left">
-          <img src="images/screen1.png" alt="FitCoach screen" />
+          <img src="images/screen1.png" alt="" data-i18n="hero.alt1" data-i18n-attr="alt" />
         </div>
         <div class="phone-frame phone-main">
-          <img src="images/screen2.png" alt="FitCoach main screen" />
+          <img src="images/screen2.png" alt="" data-i18n="hero.alt2" data-i18n-attr="alt" />
         </div>
         <div class="phone-frame phone-right">
-          <img src="images/screen3.png" alt="FitCoach screen" />
+          <img src="images/screen3.png" alt="" data-i18n="hero.alt3" data-i18n-attr="alt" />
         </div>
       </div>
     </div>
@@ -925,36 +1003,35 @@
   <section class="showcase-section">
     <div class="showcase-inner">
       <div class="showcase-header fade-up">
-        <div class="section-label">Features</div>
-        <h2 class="section-title">BUILT FOR REAL<br><span class="grad-text">RESULTS</span></h2>
+        <div class="section-label" data-i18n="showcase.label"></div>
+        <h2 class="section-title"><span data-i18n="showcase.t1"></span><br><span class="grad-text" data-i18n="showcase.t2"></span></h2>
       </div>
 
       <!-- 1 · Progress Tracking -->
       <div class="feature-row fade-up">
         <div class="feature-text">
           <span class="feature-num">01</span>
-          <div class="feature-tag">📊 Analytics</div>
-          <h3 class="feature-title">PROGRESS<br><span class="grad-text">TRACKING</span></h3>
-          <p class="feature-desc">See every gain, session by session. Log your sets, reps, and weights — then watch your
-            volume and strength climb over weeks and months with clean, visual charts.</p>
+          <div class="feature-tag">📊 <span data-i18n="f1.tag"></span></div>
+          <h3 class="feature-title"><span data-i18n="f1.title1"></span><br><span class="grad-text" data-i18n="f1.title2"></span></h3>
+          <p class="feature-desc" data-i18n="f1.desc"></p>
           <ul class="feature-bullets">
-            <li>Track sets, reps, and weight per exercise</li>
-            <li>Visual volume charts across weeks</li>
-            <li>Personal records highlighted automatically</li>
-            <li>Workout history always at your fingertips</li>
+            <li data-i18n="f1.b1"></li>
+            <li data-i18n="f1.b2"></li>
+            <li data-i18n="f1.b3"></li>
+            <li data-i18n="f1.b4"></li>
           </ul>
         </div>
         <div class="feature-phone-wrap">
           <div class="phone-badge badge-tl">
             <div class="badge-dot green"></div>
-            <span style="color:#00ff88">+18% volume this week</span>
+            <span style="color:#00ff88" data-i18n="f1.badgeTl"></span>
           </div>
           <div class="showcase-phone">
-            <img src="images/screenshot1.png" alt="Progress tracking screen" />
+            <img src="images/screenshot1.png" alt="" data-i18n="f1.alt" data-i18n-attr="alt" />
           </div>
           <div class="phone-badge badge-br">
             <div class="badge-dot"></div>
-            <span style="color:var(--cyan)">New PR 🎉</span>
+            <span style="color:var(--cyan)" data-i18n="f1.badgeBr"></span>
           </div>
         </div>
       </div>
@@ -965,22 +1042,21 @@
       <div class="feature-row reverse fade-up">
         <div class="feature-text">
           <span class="feature-num">02</span>
-          <div class="feature-tag">🎬 Exercise Library</div>
-          <h3 class="feature-title">IMAGE & VIDEO<br><span class="grad-text">EXERCISE DEMOS</span></h3>
-          <p class="feature-desc">Never guess about form again. Every exercise comes with high-quality video
-            demonstrations and detailed muscle diagrams so you nail technique from your very first rep.</p>
+          <div class="feature-tag">🎬 <span data-i18n="f2.tag"></span></div>
+          <h3 class="feature-title"><span data-i18n="f2.title1"></span><br><span class="grad-text" data-i18n="f2.title2"></span></h3>
+          <p class="feature-desc" data-i18n="f2.desc"></p>
           <ul class="feature-bullets">
-            <li>Step-by-step technique cues</li>
-            <li>Hundreds of exercises across all categories</li>
+            <li data-i18n="f2.b1"></li>
+            <li data-i18n="f2.b2"></li>
           </ul>
         </div>
         <div class="feature-phone-wrap glow-pink">
           <div class="phone-badge badge-tr">
             <div class="badge-dot pink"></div>
-            <span style="color:var(--pink)">800+ exercises</span>
+            <span style="color:var(--pink)" data-i18n="f2.badgeTr"></span>
           </div>
           <div class="showcase-phone pink-glow">
-            <img src="images/screenshot2.png" alt="Exercise demo screen" />
+            <img src="images/screenshot2.png" alt="" data-i18n="f2.alt" data-i18n-attr="alt" />
           </div>
         </div>
       </div>
@@ -991,24 +1067,23 @@
       <div class="feature-row fade-up">
         <div class="feature-text">
           <span class="feature-num">03</span>
-          <div class="feature-tag">💪 Customization</div>
-          <h3 class="feature-title">MUSCLE GROUP<br><span class="grad-text">TARGETING</span></h3>
-          <p class="feature-desc">Focus on what matters to you. Toggle specific muscle groups on or off and exclude
-            exercises you dislike — your AI plan adapts to hit exactly the muscles you want.</p>
+          <div class="feature-tag">💪 <span data-i18n="f3.tag"></span></div>
+          <h3 class="feature-title"><span data-i18n="f3.title1"></span><br><span class="grad-text" data-i18n="f3.title2"></span></h3>
+          <p class="feature-desc" data-i18n="f3.desc"></p>
           <ul class="feature-bullets">
-            <li>Select which muscles to train or skip</li>
-            <li>Exclude exercises you dislike or can't do</li>
-            <li>AI rebuilds your plan around your choices</li>
-            <li>Perfect for injury management too</li>
+            <li data-i18n="f3.b1"></li>
+            <li data-i18n="f3.b2"></li>
+            <li data-i18n="f3.b3"></li>
+            <li data-i18n="f3.b4"></li>
           </ul>
         </div>
         <div class="feature-phone-wrap glow-mid">
           <div class="showcase-phone">
-            <img src="images/screenshot3.png" alt="Muscle group targeting screen" />
+            <img src="images/screenshot3.png" alt="" data-i18n="f3.alt" data-i18n-attr="alt" />
           </div>
           <div class="phone-badge badge-bl">
             <div class="badge-dot" style="background:var(--mid);box-shadow:0 0 6px var(--mid)"></div>
-            <span style="color:var(--mid)">Plan updated ✓</span>
+            <span style="color:var(--mid)" data-i18n="f3.badgeBl"></span>
           </div>
         </div>
       </div>
@@ -1019,24 +1094,23 @@
       <div class="feature-row reverse fade-up">
         <div class="feature-text">
           <span class="feature-num">04</span>
-          <div class="feature-tag">🏋️ Equipment</div>
-          <h3 class="feature-title">EQUIPMENT<br><span class="grad-text">TOGGLE</span></h3>
-          <p class="feature-desc">Train anywhere. full gym, home setup, or just your bodyweight. Tell the app what you
-            have and it only programs exercises you can actually do with your gear.</p>
+          <div class="feature-tag">🏋️ <span data-i18n="f4.tag"></span></div>
+          <h3 class="feature-title"><span data-i18n="f4.title1"></span><br><span class="grad-text" data-i18n="f4.title2"></span></h3>
+          <p class="feature-desc" data-i18n="f4.desc"></p>
           <ul class="feature-bullets">
-            <li>Select from gym, home, or no equipment</li>
-            <li>Toggle individual equipment items on or off</li>
-            <li>Workouts auto-adjust to what you have</li>
-            <li>Switch between setups anytime</li>
+            <li data-i18n="f4.b1"></li>
+            <li data-i18n="f4.b2"></li>
+            <li data-i18n="f4.b3"></li>
+            <li data-i18n="f4.b4"></li>
           </ul>
         </div>
         <div class="feature-phone-wrap">
           <div class="phone-badge badge-tl">
             <div class="badge-dot"></div>
-            <span style="color:var(--cyan)">Home mode on</span>
+            <span style="color:var(--cyan)" data-i18n="f4.badgeTl"></span>
           </div>
           <div class="showcase-phone">
-            <img src="images/screenshot4.png" alt="Equipment toggle screen" />
+            <img src="images/screenshot4.png" alt="" data-i18n="f4.alt" data-i18n-attr="alt" />
           </div>
         </div>
       </div>
@@ -1047,24 +1121,23 @@
       <div class="feature-row fade-up">
         <div class="feature-text">
           <span class="feature-num">05</span>
-          <div class="feature-tag">📅 Scheduling</div>
-          <h3 class="feature-title">GYM<br><span class="grad-text">CALENDAR</span></h3>
-          <p class="feature-desc">Your training schedule, beautifully organized. See your upcoming workouts at a glance,
-            track your consistency streak, and never miss a session with smart reminders.</p>
+          <div class="feature-tag">📅 <span data-i18n="f5.tag"></span></div>
+          <h3 class="feature-title"><span data-i18n="f5.title1"></span><br><span class="grad-text" data-i18n="f5.title2"></span></h3>
+          <p class="feature-desc" data-i18n="f5.desc"></p>
           <ul class="feature-bullets">
-            <li>Visual weekly and monthly schedule view</li>
-            <li>Consistency streaks to keep you motivated</li>
-            <li>Smart reminders on your training days</li>
-            <li>Easy reschedule when life gets in the way</li>
+            <li data-i18n="f5.b1"></li>
+            <li data-i18n="f5.b2"></li>
+            <li data-i18n="f5.b3"></li>
+            <li data-i18n="f5.b4"></li>
           </ul>
         </div>
         <div class="feature-phone-wrap glow-pink">
           <div class="showcase-phone pink-glow">
-            <img src="images/screenshot5.png" alt="Gym calendar screen" />
+            <img src="images/screenshot5.png" alt="" data-i18n="f5.alt" data-i18n-attr="alt" />
           </div>
           <div class="phone-badge badge-br">
             <div class="badge-dot green"></div>
-            <span style="color:#00ff88">14-day streak 🔥</span>
+            <span style="color:#00ff88" data-i18n="f5.badgeBr"></span>
           </div>
         </div>
       </div>
@@ -1075,27 +1148,26 @@
   <!-- HOW IT WORKS -->
   <div class="how-section">
     <div class="how-inner">
-      <div class="section-label">How it works</div>
-      <h2 class="section-title">YOUR PLAN IN<br><span class="grad-text">THREE STEPS</span></h2>
+      <div class="section-label" data-i18n="how.label"></div>
+      <h2 class="section-title"><span data-i18n="how.t1"></span><br><span class="grad-text" data-i18n="how.t2"></span></h2>
       <div class="steps">
         <div class="step fade-up">
           <div class="step-num">01</div>
           <div class="step-divider"></div>
-          <h3>Tell us about yourself</h3>
-          <p>Fitness level, goals, available time, equipment, and any injuries. Takes under 2 minutes.</p>
+          <h3 data-i18n="how.s1h"></h3>
+          <p data-i18n="how.s1p"></p>
         </div>
         <div class="step fade-up">
           <div class="step-num">02</div>
           <div class="step-divider"></div>
-          <h3>AI builds your plan</h3>
-          <p>A personalized, structured program is generated instantly with the right exercises, sets, and progression
-            for your level.</p>
+          <h3 data-i18n="how.s2h"></h3>
+          <p data-i18n="how.s2p"></p>
         </div>
         <div class="step fade-up">
           <div class="step-num">03</div>
           <div class="step-divider"></div>
-          <h3>Train and improve</h3>
-          <p>Follow your plan, log your workouts, and watch your fitness grow. The AI adapts as you do.</p>
+          <h3 data-i18n="how.s3h"></h3>
+          <p data-i18n="how.s3p"></p>
         </div>
       </div>
     </div>
@@ -1103,56 +1175,54 @@
 
   <!-- REVIEWS -->
   <section class="section">
-    <div class="section-label">Reviews</div>
-    <h2 class="section-title">PEOPLE LOVE<br><span class="grad-text">FIT COACH</span></h2>
+    <div class="section-label" data-i18n="reviews.label"></div>
+    <h2 class="section-title"><span data-i18n="reviews.t1"></span><br><span class="grad-text" data-i18n="reviews.t2"></span></h2>
     <div class="reviews">
       <div class="review-card fade-up" style="border-color:rgba(0,240,255,0.2)">
         <span class="stars">★★★★★</span>
-        <div class="review-title">Simple and Practical</div>
-        <p class="review-text">"I like how fast and simple the app is to use. The content containing images and videos
-          also makes it much easier to use."</p>
-        <div class="review-author">— Matheus Ribeiro, App Store</div>
+        <div class="review-title" data-i18n="reviews.r1title"></div>
+        <p class="review-text" data-i18n="reviews.r1text"></p>
+        <div class="review-author" data-i18n="reviews.r1author"></div>
       </div>
       <div class="review-card fade-up">
         <span class="stars">★★★★★</span>
-        <div class="review-title">Keeps Me Consistent</div>
-        <p class="review-text">"The reminders and simple tracking made me actually stick to a routine. I've never been
-          this consistent before."</p>
-        <div class="review-author">— Bruno Martins, App Store</div>
+        <div class="review-title" data-i18n="reviews.r2title"></div>
+        <p class="review-text" data-i18n="reviews.r2text"></p>
+        <div class="review-author" data-i18n="reviews.r2author"></div>
       </div>
       <div class="review-card fade-up">
         <span class="stars">★★★★★</span>
-        <div class="review-title">Great for Beginners</div>
-        <p class="review-text">"I had no idea how to build a workout plan before. This app made everything simple and
-          clear from day one."</p>
-        <div class="review-author">— Pedro Oliveira, App Store</div>
+        <div class="review-title" data-i18n="reviews.r3title"></div>
+        <p class="review-text" data-i18n="reviews.r3text"></p>
+        <div class="review-author" data-i18n="reviews.r3author"></div>
       </div>
     </div>
   </section>
 
   <!-- CTA BOTTOM -->
   <section class="cta-bottom">
-    <h2 class="fade-up">START YOUR<br><span class="grad-text">FIRST WORKOUT</span><br>TODAY</h2>
-    <p class="fade-up">Free to download. No equipment needed to get started.</p>
+    <h2 class="fade-up"><span data-i18n="cta.l1"></span><br><span class="grad-text" data-i18n="cta.l2"></span><br><span data-i18n="cta.l3"></span></h2>
+    <p class="fade-up" data-i18n="cta.sub"></p>
     <a href="https://apps.apple.com/app/id6760431730" class="btn-primary fade-up" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="currentColor" width="19" height="19">
         <path
           d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
       </svg>
-      Download on the App Store
+      <span data-i18n="cta.btn"></span>
     </a>
   </section>
 
   <footer>
     <div class="nav-logo" style="font-size:1.2rem">FIT COACH</div>
     <div style="display:flex;gap:24px">
-      <a href="mailto:fitcoachappcontact@gmail.com">Support</a>
-      <a href="https://sites.google.com/view/fit-coach-privacy/" target="_blank" rel="noopener">Privacy Policy</a>
-      <a href="https://sites.google.com/view/fit-coach-terms/" target="_blank" rel="noopener">Terms of Use</a>
+      <a href="mailto:fitcoachappcontact@gmail.com" data-i18n="footer.support"></a>
+      <a href="https://sites.google.com/view/fit-coach-privacy/" target="_blank" rel="noopener" data-i18n="footer.privacy"></a>
+      <a href="https://sites.google.com/view/fit-coach-terms/" target="_blank" rel="noopener" data-i18n="footer.terms"></a>
     </div>
-    <div>© 2026 Fit Coach</div>
+    <div data-i18n="footer.copy"></div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, i) => {
