@@ -22,16 +22,8 @@
       --gray: #7a7a99;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       background: var(--black);
       color: var(--white);
@@ -49,9 +41,7 @@
     /* NAV */
     nav {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
+      top: 0; left: 0; right: 0;
       z-index: 100;
       display: flex;
       align-items: center;
@@ -61,7 +51,6 @@
       backdrop-filter: blur(16px);
       border-bottom: 1px solid rgba(0, 240, 255, 0.07);
     }
-
     .nav-logo {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 1.55rem;
@@ -71,7 +60,6 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-
     .nav-cta {
       background: linear-gradient(135deg, var(--cyan) 0%, var(--pink) 100%);
       color: #07070f;
@@ -82,11 +70,7 @@
       text-decoration: none;
       transition: opacity 0.2s, transform 0.2s;
     }
-
-    .nav-cta:hover {
-      opacity: 0.85;
-      transform: translateY(-1px);
-    }
+    .nav-cta:hover { opacity: 0.85; transform: translateY(-1px); }
 
     /* HERO */
     .hero {
@@ -98,7 +82,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .hero::before {
       content: '';
       position: absolute;
@@ -108,7 +91,6 @@
         radial-gradient(ellipse 50% 55% at 18% 72%, rgba(192, 0, 255, 0.08) 0%, transparent 65%),
         radial-gradient(ellipse 30% 30% at 50% 8%, rgba(123, 94, 255, 0.05) 0%, transparent 60%);
     }
-
     .hero::after {
       content: '';
       position: absolute;
@@ -119,7 +101,6 @@
       background-size: 55px 55px;
       mask-image: radial-gradient(ellipse 80% 80% at center, black 20%, transparent 75%);
     }
-
     .hero-content {
       position: relative;
       z-index: 1;
@@ -130,11 +111,7 @@
       max-width: 1100px;
       width: 100%;
     }
-
-    .hero-text {
-      max-width: 520px;
-    }
-
+    .hero-text { max-width: 520px; }
     .hero-badge {
       display: inline-flex;
       align-items: center;
@@ -150,30 +127,17 @@
       color: var(--cyan);
       margin-bottom: 26px;
     }
-
     .hero-badge-dot {
-      width: 6px;
-      height: 6px;
+      width: 6px; height: 6px;
       background: var(--cyan);
       border-radius: 50%;
       animation: pulse 2s infinite;
       box-shadow: 0 0 6px var(--cyan);
     }
-
     @keyframes pulse {
-
-      0%,
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
-
-      50% {
-        opacity: 0.3;
-        transform: scale(1.5);
-      }
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.3; transform: scale(1.5); }
     }
-
     h1 {
       font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(3.5rem, 7vw, 6.2rem);
@@ -181,7 +145,6 @@
       letter-spacing: 1px;
       margin-bottom: 24px;
     }
-
     .hero-sub {
       font-size: 1rem;
       font-weight: 300;
@@ -190,14 +153,7 @@
       margin-bottom: 40px;
       max-width: 420px;
     }
-
-    .cta-group {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
+    .cta-group { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
     .btn-primary {
       display: inline-flex;
       align-items: center;
@@ -212,21 +168,12 @@
       transition: transform 0.2s, box-shadow 0.2s;
       box-shadow: 0 0 30px rgba(0, 240, 255, 0.2), 0 0 60px rgba(192, 0, 255, 0.1);
     }
-
     .btn-primary:hover {
       transform: translateY(-2px);
       box-shadow: 0 4px 40px rgba(0, 240, 255, 0.35), 0 4px 80px rgba(192, 0, 255, 0.2);
     }
-
-    .btn-primary svg {
-      width: 19px;
-      height: 19px;
-    }
-
-    .hero-note {
-      font-size: 0.78rem;
-      color: var(--gray);
-    }
+    .btn-primary svg { width: 19px; height: 19px; }
+    .hero-note { font-size: 0.78rem; color: var(--gray); }
 
     /* PHONES */
     .hero-phones {
@@ -236,7 +183,6 @@
       align-items: flex-end;
       height: 560px;
     }
-
     .phone-frame {
       position: absolute;
       background: #0e0e1e;
@@ -247,40 +193,25 @@
       width: 200px;
       height: 420px;
     }
-
-    .phone-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top;
-    }
-
+    .phone-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
     .phone-main {
-      bottom: 0;
-      left: 50%;
+      bottom: 0; left: 50%;
       transform: translateX(-50%);
-      width: 222px;
-      height: 462px;
+      width: 222px; height: 462px;
       z-index: 3;
       border-color: rgba(0, 240, 255, 0.22);
       box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), 0 0 50px rgba(0, 240, 255, 0.1), 0 0 100px rgba(192, 0, 255, 0.07);
     }
-
     .phone-left {
-      bottom: 40px;
-      left: calc(50% - 222px);
+      bottom: 40px; left: calc(50% - 222px);
       transform: rotate(-8deg);
-      z-index: 2;
-      opacity: 0.6;
+      z-index: 2; opacity: 0.6;
       border-color: rgba(192, 0, 255, 0.15);
     }
-
     .phone-right {
-      bottom: 40px;
-      left: calc(50% + 22px);
+      bottom: 40px; left: calc(50% + 22px);
       transform: rotate(8deg);
-      z-index: 2;
-      opacity: 0.6;
+      z-index: 2; opacity: 0.6;
       border-color: rgba(192, 0, 255, 0.15);
     }
 
@@ -290,7 +221,6 @@
       max-width: 1100px;
       margin: 0 auto;
     }
-
     .section-label {
       font-size: 0.7rem;
       font-weight: 700;
@@ -299,7 +229,6 @@
       color: var(--cyan);
       margin-bottom: 14px;
     }
-
     .section-title {
       font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(2.5rem, 5vw, 4rem);
@@ -307,68 +236,225 @@
       margin-bottom: 56px;
     }
 
-    /* FEATURES */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .feature-card {
-      background: var(--card);
-      border: 1px solid var(--card-border);
-      border-radius: 20px;
-      padding: 30px;
+    /* ── FEATURE SHOWCASE ── */
+    .showcase-section {
+      padding: 120px 40px;
       position: relative;
       overflow: hidden;
-      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
     }
-
-    .feature-card::before {
+    .showcase-section::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.4), rgba(192, 0, 255, 0.4), transparent);
-      opacity: 0;
-      transition: opacity 0.3s;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0, 240, 255, 0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 240, 255, 0.018) 1px, transparent 1px);
+      background-size: 55px 55px;
+      mask-image: radial-gradient(ellipse 100% 80% at center, black 0%, transparent 75%);
+      pointer-events: none;
+    }
+    .showcase-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .showcase-header {
+      margin-bottom: 90px;
     }
 
-    .feature-card:hover {
-      border-color: rgba(0, 240, 255, 0.15);
-      transform: translateY(-4px);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 240, 255, 0.05);
+    /* Each feature row */
+    .feature-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+      margin-bottom: 130px;
+      position: relative;
+    }
+    .feature-row:last-child { margin-bottom: 0; }
+
+    /* Alternate: odd rows = text left, even rows = text right */
+    .feature-row.reverse { direction: rtl; }
+    .feature-row.reverse > * { direction: ltr; }
+
+    /* Text side */
+    .feature-text { }
+    .feature-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 5.5rem;
+      line-height: 1;
+      background: linear-gradient(135deg, rgba(0,240,255,0.12), rgba(192,0,255,0.12));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: -10px;
+      display: block;
+    }
+    .feature-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(0, 240, 255, 0.06);
+      border: 1px solid rgba(0, 240, 255, 0.15);
+      border-radius: 100px;
+      padding: 5px 13px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 18px;
+    }
+    .feature-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      line-height: 1;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+    }
+    .feature-desc {
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: #9999cc;
+      line-height: 1.75;
+      margin-bottom: 28px;
+      max-width: 440px;
+    }
+    .feature-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .feature-bullets li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.87rem;
+      color: #aaaac8;
+      line-height: 1.5;
+    }
+    .feature-bullets li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      min-width: 6px;
+      background: linear-gradient(135deg, var(--cyan), var(--pink));
+      border-radius: 50%;
+      margin-top: 6px;
     }
 
-    .feature-card:hover::before {
-      opacity: 1;
+    /* Phone side */
+    .feature-phone-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .feature-phone-wrap::before {
+      content: '';
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,240,255,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .feature-phone-wrap.glow-pink::before {
+      background: radial-gradient(circle, rgba(192,0,255,0.07) 0%, transparent 70%);
+    }
+    .feature-phone-wrap.glow-mid::before {
+      background: radial-gradient(circle, rgba(123,94,255,0.08) 0%, transparent 70%);
     }
 
-    .feature-icon {
-      width: 44px;
-      height: 44px;
-      background: linear-gradient(135deg, rgba(0, 240, 255, 0.1), rgba(192, 0, 255, 0.1));
-      border: 1px solid rgba(0, 240, 255, 0.1);
-      border-radius: 12px;
+    .showcase-phone {
+      width: 240px;
+      background: #0d0d1f;
+      border-radius: 36px;
+      border: 1.5px solid rgba(255, 255, 255, 0.09);
+      overflow: hidden;
+      box-shadow:
+        0 40px 80px rgba(0, 0, 0, 0.65),
+        0 0 0 1px rgba(0,240,255,0.06),
+        inset 0 1px 0 rgba(255,255,255,0.06);
+      position: relative;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .showcase-phone:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow:
+        0 55px 100px rgba(0, 0, 0, 0.7),
+        0 0 50px rgba(0,240,255,0.12),
+        0 0 0 1px rgba(0,240,255,0.12),
+        inset 0 1px 0 rgba(255,255,255,0.08);
+    }
+    .showcase-phone.pink-glow:hover {
+      box-shadow:
+        0 55px 100px rgba(0, 0, 0, 0.7),
+        0 0 50px rgba(192,0,255,0.12),
+        0 0 0 1px rgba(192,0,255,0.12),
+        inset 0 1px 0 rgba(255,255,255,0.08);
+    }
+
+    /* Notch */
+    .showcase-phone::after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 22px;
+      background: #07070f;
+      border-radius: 100px;
+      z-index: 10;
+    }
+    .showcase-phone img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: top;
+      min-height: 500px;
+    }
+
+    /* Floating badge on phone */
+    .phone-badge {
+      position: absolute;
+      background: rgba(10, 10, 25, 0.9);
+      border: 1px solid rgba(0,240,255,0.2);
+      backdrop-filter: blur(12px);
+      border-radius: 14px;
+      padding: 10px 14px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      margin-bottom: 18px;
-      font-size: 1.25rem;
-    }
-
-    .feature-card h3 {
-      font-size: 0.95rem;
+      gap: 9px;
+      font-size: 0.78rem;
       font-weight: 600;
-      margin-bottom: 10px;
+      white-space: nowrap;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+      z-index: 5;
     }
+    .phone-badge.badge-tl { top: 60px; left: -40px; }
+    .phone-badge.badge-br { bottom: 60px; right: -40px; border-color: rgba(192,0,255,0.2); }
+    .phone-badge.badge-tr { top: 80px; right: -40px; border-color: rgba(123,94,255,0.2); }
+    .phone-badge.badge-bl { bottom: 80px; left: -40px; }
+    .badge-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 6px var(--cyan);
+      flex-shrink: 0;
+    }
+    .badge-dot.pink { background: var(--pink); box-shadow: 0 0 6px var(--pink); }
+    .badge-dot.green { background: #00ff88; box-shadow: 0 0 6px #00ff88; }
 
-    .feature-card p {
-      font-size: 0.85rem;
-      color: var(--gray);
-      line-height: 1.65;
+    /* Divider between features */
+    .feature-divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0,240,255,0.1), rgba(192,0,255,0.1), transparent);
+      margin-bottom: 130px;
     }
 
     /* HOW IT WORKS */
@@ -380,47 +466,28 @@
       position: relative;
       overflow: hidden;
     }
-
     .how-section::before {
       content: '';
       position: absolute;
-      top: -150px;
-      right: -150px;
-      width: 450px;
-      height: 450px;
+      top: -150px; right: -150px;
+      width: 450px; height: 450px;
       background: radial-gradient(circle, rgba(192, 0, 255, 0.055) 0%, transparent 65%);
     }
-
     .how-section::after {
       content: '';
       position: absolute;
-      bottom: -150px;
-      left: -100px;
-      width: 400px;
-      height: 400px;
+      bottom: -150px; left: -100px;
+      width: 400px; height: 400px;
       background: radial-gradient(circle, rgba(0, 240, 255, 0.04) 0%, transparent 65%);
     }
-
-    .how-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-
+    .how-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
     .steps {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 40px;
       margin-top: 56px;
     }
-
-    .step {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
+    .step { display: flex; flex-direction: column; gap: 14px; }
     .step-num {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 4rem;
@@ -430,24 +497,13 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-
     .step-divider {
-      width: 32px;
-      height: 2px;
+      width: 32px; height: 2px;
       background: linear-gradient(90deg, var(--cyan), var(--pink));
       border-radius: 2px;
     }
-
-    .step h3 {
-      font-size: 1.05rem;
-      font-weight: 600;
-    }
-
-    .step p {
-      font-size: 0.85rem;
-      color: var(--gray);
-      line-height: 1.65;
-    }
+    .step h3 { font-size: 1.05rem; font-weight: 600; }
+    .step p { font-size: 0.85rem; color: var(--gray); line-height: 1.65; }
 
     /* REVIEWS */
     .reviews {
@@ -456,14 +512,12 @@
       gap: 18px;
       margin-top: 56px;
     }
-
     .review-card {
       background: var(--card);
       border: 1px solid var(--card-border);
       border-radius: 20px;
       padding: 28px;
     }
-
     .stars {
       display: block;
       font-size: 0.85rem;
@@ -474,7 +528,6 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-
     .review-title {
       font-size: 0.68rem;
       font-weight: 700;
@@ -486,45 +539,8 @@
       background-clip: text;
       margin-bottom: 12px;
     }
-
-    .review-text {
-      font-size: 0.88rem;
-      color: #bbbbdd;
-      line-height: 1.65;
-      margin-bottom: 20px;
-    }
-
-    .review-author {
-      font-size: 0.78rem;
-      color: var(--gray);
-      font-weight: 500;
-    }
-
-    .review-placeholder {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      border-style: dashed !important;
-      opacity: 0.42;
-      min-height: 180px;
-    }
-
-    .review-placeholder p {
-      font-size: 0.83rem;
-      color: var(--gray);
-      margin: 10px 0 18px;
-    }
-
-    .review-placeholder a {
-      font-size: 0.78rem;
-      color: var(--cyan);
-      text-decoration: none;
-      border: 1px solid rgba(0, 240, 255, 0.25);
-      padding: 7px 16px;
-      border-radius: 100px;
-    }
+    .review-text { font-size: 0.88rem; color: #bbbbdd; line-height: 1.65; margin-bottom: 20px; }
+    .review-author { font-size: 0.78rem; color: var(--gray); font-weight: 500; }
 
     /* CTA BOTTOM */
     .cta-bottom {
@@ -533,7 +549,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .cta-bottom::before {
       content: '';
       position: absolute;
@@ -542,7 +557,6 @@
         radial-gradient(ellipse 50% 70% at 28% 50%, rgba(0, 240, 255, 0.05) 0%, transparent 65%),
         radial-gradient(ellipse 50% 70% at 72% 50%, rgba(192, 0, 255, 0.06) 0%, transparent 65%);
     }
-
     .cta-bottom h2 {
       font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(3rem, 6vw, 5.5rem);
@@ -550,17 +564,8 @@
       margin-bottom: 20px;
       position: relative;
     }
-
-    .cta-bottom p {
-      color: var(--gray);
-      font-size: 1rem;
-      margin-bottom: 40px;
-      position: relative;
-    }
-
-    .cta-bottom .btn-primary {
-      position: relative;
-    }
+    .cta-bottom p { color: var(--gray); font-size: 1rem; margin-bottom: 40px; position: relative; }
+    .cta-bottom .btn-primary { position: relative; }
 
     /* FOOTER */
     footer {
@@ -574,80 +579,35 @@
       max-width: 1100px;
       margin: 0 auto;
     }
-
-    footer a {
-      color: var(--gray);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    footer a:hover {
-      color: var(--cyan);
-    }
+    footer a { color: var(--gray); text-decoration: none; transition: color 0.2s; }
+    footer a:hover { color: var(--cyan); }
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
-      nav {
-        padding: 16px 20px;
-      }
-
-      .hero {
-        padding: 100px 20px 60px;
-      }
-
-      .hero-content {
+      nav { padding: 16px 20px; }
+      .hero { padding: 100px 20px 60px; }
+      .hero-content { grid-template-columns: 1fr; gap: 50px; }
+      .hero-phones { height: 380px; }
+      .phone-main { width: 170px; height: 360px; }
+      .phone-left { left: calc(50% - 175px); width: 150px; height: 315px; }
+      .phone-right { left: calc(50% + 25px); width: 150px; height: 315px; }
+      .section, .how-section { padding: 60px 20px; }
+      .steps, .reviews { grid-template-columns: 1fr; }
+      .showcase-section { padding: 70px 20px; }
+      .feature-row, .feature-row.reverse {
         grid-template-columns: 1fr;
-        gap: 50px;
+        direction: ltr;
+        gap: 40px;
+        margin-bottom: 80px;
       }
-
-      .hero-phones {
-        height: 380px;
-      }
-
-      .phone-main {
-        width: 170px;
-        height: 360px;
-      }
-
-      .phone-left {
-        left: calc(50% - 175px);
-        width: 150px;
-        height: 315px;
-      }
-
-      .phone-right {
-        left: calc(50% + 25px);
-        width: 150px;
-        height: 315px;
-      }
-
-      .section,
-      .how-section {
-        padding: 60px 20px;
-      }
-
-      .features-grid,
-      .steps,
-      .reviews {
-        grid-template-columns: 1fr;
-      }
-
-      .cta-bottom {
-        padding: 80px 20px;
-      }
-
-      footer {
-        flex-direction: column;
-        gap: 14px;
-        text-align: center;
-      }
-
-      footer div:nth-child(2) {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-        justify-content: center;
-      }
+      .feature-row.reverse > * { direction: ltr; }
+      .phone-badge { display: none; }
+      .showcase-phone { width: 200px; }
+      .showcase-phone img { min-height: 420px; }
+      .feature-phone-wrap { order: -1; }
+      .cta-bottom { padding: 80px 20px; }
+      footer { flex-direction: column; gap: 14px; text-align: center; }
+      footer div:nth-child(2) { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
     }
 
     /* ANIMATIONS */
@@ -656,11 +616,7 @@
       transform: translateY(28px);
       transition: opacity 0.7s ease, transform 0.7s ease;
     }
-
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
   </style>
 </head>
 
@@ -671,6 +627,7 @@
     <a href="https://apps.apple.com/app/id6760431730" class="nav-cta" target="_blank" rel="noopener">Download Free</a>
   </nav>
 
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
       <div class="hero-text fade-up">
@@ -684,8 +641,7 @@
         <div class="cta-group">
           <a href="https://apps.apple.com/app/id6760431730" class="btn-primary" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
             </svg>
             App Store
           </a>
@@ -696,11 +652,9 @@
         <div class="phone-frame phone-left">
           <img src="images/screen1.png" alt="FitCoach screen" />
         </div>
-
         <div class="phone-frame phone-main">
           <img src="images/screen2.png" alt="FitCoach main screen" />
         </div>
-
         <div class="phone-frame phone-right">
           <img src="images/screen3.png" alt="FitCoach screen" />
         </div>
@@ -708,48 +662,155 @@
     </div>
   </section>
 
-  <section class="section">
-    <div class="section-label">Features</div>
-    <h2 class="section-title">EVERYTHING YOUR<br><span class="grad-text">COACH WOULD BUILD</span></h2>
-    <div class="features-grid">
-      <div class="feature-card fade-up">
-        <div class="feature-icon">🧠</div>
-        <h3>AI Workout Generation</h3>
-        <p>Tell us your goals and schedule. Our AI builds a complete, periodized plan tailored to you — not a
-          cookie-cutter template.</p>
+  <!-- ── FEATURE SHOWCASE ── -->
+  <section class="showcase-section">
+    <div class="showcase-inner">
+      <div class="showcase-header fade-up">
+        <div class="section-label">Features</div>
+        <h2 class="section-title">BUILT FOR REAL<br><span class="grad-text">RESULTS</span></h2>
       </div>
-      <div class="feature-card fade-up">
-        <div class="feature-icon">💪</div>
-        <h3>Exercise Library</h3>
-        <p>Hundreds of exercises with video demos, muscle diagrams, and detailed technique cues for every movement
-          pattern.</p>
+
+      <!-- 1 · Progress Tracking -->
+      <div class="feature-row fade-up">
+        <div class="feature-text">
+          <span class="feature-num">01</span>
+          <div class="feature-tag">📊 Analytics</div>
+          <h3 class="feature-title">PROGRESS<br><span class="grad-text">TRACKING</span></h3>
+          <p class="feature-desc">See every gain, session by session. Log your sets, reps, and weights — then watch your volume and strength climb over weeks and months with clean, visual charts.</p>
+          <ul class="feature-bullets">
+            <li>Track sets, reps, and weight per exercise</li>
+            <li>Visual volume charts across weeks</li>
+            <li>Personal records highlighted automatically</li>
+            <li>Workout history always at your fingertips</li>
+          </ul>
+        </div>
+        <div class="feature-phone-wrap">
+          <div class="phone-badge badge-tl">
+            <div class="badge-dot green"></div>
+            <span style="color:#00ff88">+18% volume this week</span>
+          </div>
+          <div class="showcase-phone">
+            <img src="images/screen1.png" alt="Progress tracking screen" />
+          </div>
+          <div class="phone-badge badge-br">
+            <div class="badge-dot"></div>
+            <span style="color:var(--cyan)">New PR 🎉</span>
+          </div>
+        </div>
       </div>
-      <div class="feature-card fade-up">
-        <div class="feature-icon">📊</div>
-        <h3>Progress Tracking</h3>
-        <p>Log sets, reps, and weight. Track volume over time and watch your progress accumulate week after week.</p>
+
+      <div class="feature-divider"></div>
+
+      <!-- 2 · Image/Video Demo -->
+      <div class="feature-row reverse fade-up">
+        <div class="feature-text">
+          <span class="feature-num">02</span>
+          <div class="feature-tag">🎬 Exercise Library</div>
+          <h3 class="feature-title">IMAGE & VIDEO<br><span class="grad-text">EXERCISE DEMOS</span></h3>
+          <p class="feature-desc">Never guess about form again. Every exercise comes with high-quality video demonstrations and detailed muscle diagrams so you nail technique from your very first rep.</p>
+          <ul class="feature-bullets">
+            <li>HD video demos for every movement</li>
+            <li>Step-by-step technique cues</li>
+            <li>Primary and secondary muscle diagrams</li>
+            <li>Hundreds of exercises across all categories</li>
+          </ul>
+        </div>
+        <div class="feature-phone-wrap glow-pink">
+          <div class="phone-badge badge-tr">
+            <div class="badge-dot pink"></div>
+            <span style="color:var(--pink)">480+ exercises</span>
+          </div>
+          <div class="showcase-phone pink-glow">
+            <img src="images/screen2.png" alt="Exercise demo screen" />
+          </div>
+        </div>
       </div>
-      <div class="feature-card fade-up">
-        <div class="feature-icon">⌚</div>
-        <h3>Apple Watch</h3>
-        <p>Your workout right on your wrist. Glance at your next set, log completions, and stay focused without touching
-          your phone.</p>
+
+      <div class="feature-divider"></div>
+
+      <!-- 3 · Muscles Toggle -->
+      <div class="feature-row fade-up">
+        <div class="feature-text">
+          <span class="feature-num">03</span>
+          <div class="feature-tag">💪 Customization</div>
+          <h3 class="feature-title">MUSCLE GROUP<br><span class="grad-text">TARGETING</span></h3>
+          <p class="feature-desc">Focus on what matters to you. Toggle specific muscle groups on or off and exclude exercises you dislike — your AI plan adapts to hit exactly the muscles you want.</p>
+          <ul class="feature-bullets">
+            <li>Select which muscles to train or skip</li>
+            <li>Exclude exercises you dislike or can't do</li>
+            <li>AI rebuilds your plan around your choices</li>
+            <li>Perfect for injury management too</li>
+          </ul>
+        </div>
+        <div class="feature-phone-wrap glow-mid">
+          <div class="showcase-phone">
+            <img src="images/screen3.png" alt="Muscle group targeting screen" />
+          </div>
+          <div class="phone-badge badge-bl">
+            <div class="badge-dot" style="background:var(--mid);box-shadow:0 0 6px var(--mid)"></div>
+            <span style="color:var(--mid)">Plan updated ✓</span>
+          </div>
+        </div>
       </div>
-      <div class="feature-card fade-up">
-        <div class="feature-icon">🎯</div>
-        <h3>Muscle Group Targeting</h3>
-        <p>Choose exactly which muscles you want to focus on. Exclude exercises you dislike. Your plan adapts to your
-          preferences.</p>
+
+      <div class="feature-divider"></div>
+
+      <!-- 4 · Equipment Toggle -->
+      <div class="feature-row reverse fade-up">
+        <div class="feature-text">
+          <span class="feature-num">04</span>
+          <div class="feature-tag">🏋️ Equipment</div>
+          <h3 class="feature-title">EQUIPMENT<br><span class="grad-text">TOGGLE</span></h3>
+          <p class="feature-desc">Train anywhere — full gym, home setup, or just your bodyweight. Tell the app what you have and it only programs exercises you can actually do with your gear.</p>
+          <ul class="feature-bullets">
+            <li>Select from gym, home, or no equipment</li>
+            <li>Toggle individual equipment items on or off</li>
+            <li>Workouts auto-adjust to what you have</li>
+            <li>Switch between setups anytime</li>
+          </ul>
+        </div>
+        <div class="feature-phone-wrap">
+          <div class="phone-badge badge-tl">
+            <div class="badge-dot"></div>
+            <span style="color:var(--cyan)">Home mode on</span>
+          </div>
+          <div class="showcase-phone">
+            <img src="images/screen4.png" alt="Equipment toggle screen" />
+          </div>
+        </div>
       </div>
-      <div class="feature-card fade-up">
-        <div class="feature-icon">🔔</div>
-        <h3>Smart Reminders</h3>
-        <p>The app learns when you usually train and sends a reminder on your gym days — automatically, no setup
-          required.</p>
+
+      <div class="feature-divider"></div>
+
+      <!-- 5 · Gym Calendar -->
+      <div class="feature-row fade-up">
+        <div class="feature-text">
+          <span class="feature-num">05</span>
+          <div class="feature-tag">📅 Scheduling</div>
+          <h3 class="feature-title">GYM<br><span class="grad-text">CALENDAR</span></h3>
+          <p class="feature-desc">Your training schedule, beautifully organized. See your upcoming workouts at a glance, track your consistency streak, and never miss a session with smart reminders.</p>
+          <ul class="feature-bullets">
+            <li>Visual weekly and monthly schedule view</li>
+            <li>Consistency streaks to keep you motivated</li>
+            <li>Smart reminders on your training days</li>
+            <li>Easy reschedule when life gets in the way</li>
+          </ul>
+        </div>
+        <div class="feature-phone-wrap glow-pink">
+          <div class="showcase-phone pink-glow">
+            <img src="images/screen5.png" alt="Gym calendar screen" />
+          </div>
+          <div class="phone-badge badge-br">
+            <div class="badge-dot green"></div>
+            <span style="color:#00ff88">14-day streak 🔥</span>
+          </div>
+        </div>
       </div>
+
     </div>
   </section>
 
+  <!-- HOW IT WORKS -->
   <div class="how-section">
     <div class="how-inner">
       <div class="section-label">How it works</div>
@@ -765,8 +826,7 @@
           <div class="step-num">02</div>
           <div class="step-divider"></div>
           <h3>AI builds your plan</h3>
-          <p>A personalized, structured program is generated instantly — with the right exercises, sets, and progression
-            for your level.</p>
+          <p>A personalized, structured program is generated instantly — with the right exercises, sets, and progression for your level.</p>
         </div>
         <div class="step fade-up">
           <div class="step-num">03</div>
@@ -778,6 +838,7 @@
     </div>
   </div>
 
+  <!-- REVIEWS -->
   <section class="section">
     <div class="section-label">Reviews</div>
     <h2 class="section-title">PEOPLE LOVE<br><span class="grad-text">FIT COACH</span></h2>
@@ -785,35 +846,31 @@
       <div class="review-card fade-up" style="border-color:rgba(0,240,255,0.2)">
         <span class="stars">★★★★★</span>
         <div class="review-title">Simple and Practical</div>
-        <p class="review-text">"I like how fast and simple the app is to use. The content containing images and videos
-          also makes it much easier to use."</p>
+        <p class="review-text">"I like how fast and simple the app is to use. The content containing images and videos also makes it much easier to use."</p>
         <div class="review-author">— Matheus Ribeiro, App Store</div>
       </div>
       <div class="review-card fade-up">
         <span class="stars">★★★★★</span>
         <div class="review-title">Keeps Me Consistent</div>
-        <p class="review-text">"The reminders and simple tracking made me actually stick to a routine. I’ve never been
-          this consistent before."</p>
+        <p class="review-text">"The reminders and simple tracking made me actually stick to a routine. I've never been this consistent before."</p>
         <div class="review-author">— Bruno Martins, App Store</div>
       </div>
-
       <div class="review-card fade-up">
         <span class="stars">★★★★★</span>
         <div class="review-title">Great for Beginners</div>
-        <p class="review-text">"I had no idea how to build a workout plan before. This app made everything simple and
-          clear from day one."</p>
+        <p class="review-text">"I had no idea how to build a workout plan before. This app made everything simple and clear from day one."</p>
         <div class="review-author">— Pedro Oliveira, App Store</div>
       </div>
     </div>
   </section>
 
+  <!-- CTA BOTTOM -->
   <section class="cta-bottom">
     <h2 class="fade-up">START YOUR<br><span class="grad-text">FIRST WORKOUT</span><br>TODAY</h2>
     <p class="fade-up">Free to download. No equipment needed to get started.</p>
     <a href="https://apps.apple.com/app/id6760431730" class="btn-primary fade-up" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="currentColor" width="19" height="19">
-        <path
-          d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
       </svg>
       Download on the App Store
     </a>
@@ -840,5 +897,4 @@
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
   </script>
 </body>
-
 </html>
